@@ -1,7 +1,9 @@
-# Getting Started with Create React App
+# Getting Started with Create React App by writing in terminal
+ npx create-react-app word-counter-and-case-converter ( dont worry you can skip this step if u copy the enter folder)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# To download the npm by writing in terminal
+ npm i 
+ 
 ## Available Scripts
 
 In the project directory, you can run:
