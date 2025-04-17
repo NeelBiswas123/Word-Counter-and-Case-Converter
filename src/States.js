@@ -3,8 +3,12 @@ import React,{useState} from 'react'
 
 export default function States(props) {
     const [text, setText] = useState("");
+    const[darkMode,setDarkMode] = useState({backgroundColor: "white",
+                color :"black"
+            })
   
-    
+    const[modename,setModename] = useState("Dark")
+
     
     function handleUpClick(){
         console.log(("Upper"));
@@ -24,6 +28,7 @@ export default function States(props) {
 
 
 
+
     // another way to write func 
     const handleOnChange =  (event) =>{
         console.log("Handle on change");
@@ -31,17 +36,42 @@ export default function States(props) {
         
     }
     
+    const ToggleDarkMode = () =>{
+            // console.log(darkMode);
+            if(darkMode.backgroundColor === "white"){
+                setDarkMode({ backgroundColor : "black",
+                            color : "white"    }) 
+                document.body.style.backgroundColor = "black"
+
+                setModename("Light")
+            }
+            else{
+                setDarkMode({ backgroundColor : "white",
+                            color : "black"    }) 
+                document.body.style.backgroundColor = "white"
+
+                setModename("Dark")
+            }
+        }          
+
+
   return (
     <>
-        <div className="container my-5">
+    <div style={darkMode}>
+
+           
+            <button onClick={ToggleDarkMode}> {modename} Mode</button>
+
+
+        <div className="container my-5" >
         <h1>{props.heading} and Word Counter</h1>
         <div className="mb-3">
-        <textarea className="form-control" value={text} onChange={handleOnChange} id="mybox" rows="8" placeholder='Enter your text'></textarea>
+        <textarea className="form-control"  value={text} onChange={handleOnChange} id="mybox" rows="8" placeholder='Enter your text'></textarea>
         </div>
 
-        <button className="btn btn-primary" onClick={handleUpClick}>Convert Uppercase</button>
-        <button className="btn btn-primary mx-5" onClick={handleDownClick}>Convert Lowercase</button>
-        <button className="btn btn-primary mx-5" onClick={handleClear}>Clear Text</button>
+        <button  onClick={handleUpClick}>Convert Uppercase</button>
+        <button  onClick={handleDownClick}>Convert Lowercase</button>
+        <button  onClick={handleClear}>Clear Text</button>
         </div>
         
         
@@ -60,6 +90,7 @@ export default function States(props) {
 
         <a href="https://github.com/NeelBiswas123/"> Follow my github</a>  
     
+    </div>
       
     </>
   )
