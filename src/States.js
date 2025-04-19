@@ -3,6 +3,7 @@ import React,{useState} from 'react'
 
 export default function States(props) {
     const [text, setText] = useState("");
+    console.log(text)
     const[darkMode,setDarkMode] = useState({backgroundColor: "white",
                 color :"black"
             })
@@ -77,7 +78,9 @@ export default function States(props) {
         
         <div className="container my-4">
             <h1>Your Text Summary</h1>
-            <p> {text.split(" ").length-1} words and {text.length} Chracters</p>
+            {/* <p> {text.split(" ").length-1} words and {text.length} Chracters</p> */}
+            <p>{text.split(" ").filter((word) => word !== "").length} words and {text.replace(/\s/g, "").length} characters</p>
+    
             <p> {0.008 * text.split(" ").length} Minutes or {0.48 * text.split(" ").length} Seconds to read</p>
         </div>
 
