@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Word-Counter-and-Case-Converter/static/css/main.13256026.css",
+    "main.js": "/Word-Counter-and-Case-Converter/static/js/main.0073feb0.js",
+    "index.html": "/Word-Counter-and-Case-Converter/index.html",
+    "main.13256026.css.map": "/Word-Counter-and-Case-Converter/static/css/main.13256026.css.map",
+    "main.0073feb0.js.map": "/Word-Counter-and-Case-Converter/static/js/main.0073feb0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13256026.css",
+    "static/js/main.0073feb0.js"
+  ]
+}
