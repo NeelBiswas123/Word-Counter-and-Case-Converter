@@ -1,3 +1,6 @@
+here the website https://neelbiswas123.github.io/Word-Counter-and-Case-Converter/
+
+
 # Getting Started with Create React App by writing in terminal
  npx create-react-app word-counter-and-case-converter ( dont worry you can skip this step if u copy the enter folder)
 
